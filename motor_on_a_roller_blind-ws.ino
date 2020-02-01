@@ -51,14 +51,16 @@ bool shouldSaveConfig = false;      //Used for WIFI Manager callback to save par
 boolean initLoop = true;            //To enable actions first time the loop is run
 boolean ccw = true;                 //Turns counter clockwise to lower the curtain
 
-// --- Define motor and variables below ---
+//--------------- MOTOR PARAMETERS ------------------
+
 // Motor pin definitions:
 #define motorPin1  8      // IN1 on the ULN2003 driver
 #define motorPin2  9      // IN2 on the ULN2003 driver
 #define motorPin3  10     // IN3 on the ULN2003 driver
 #define motorPin4  11     // IN4 on the ULN2003 driver
 
-// Define the AccelStepper interface type; 4 wire motor in half step mode:
+// Define the AccelStepper interface type; 4 wire motor in half step mode.
+// 8 = Half step mode, 4 = Full step mode.
 #define MotorInterfaceType 8
 
 // Initialize with pin sequence IN1-IN3-IN2-IN4 for using the AccelStepper library with 28BYJ-48 stepper motor:
@@ -78,6 +80,8 @@ void stepper_setup()
 // }
 
 // Stepper_28BYJ_48 small_stepper(D1, D3, D2, D4); //Initiate stepper driver
+
+//---------------------- END MOTOR PARAMETERS -----------------------
 
 ESP8266WebServer server(80);              // TCP server at port 80 will respond to HTTP requests
 WebSocketsServer webSocket = WebSocketsServer(81);  // WebSockets will respond on port 81
@@ -132,8 +136,7 @@ void sendmsg(String topic, String payload) {
 }
 
 
-/****************************************************************************************
-*/
+/****************************************************************************************/
 void processMsg(String res, uint8_t clientnum){
   /*
      Check if calibration is running and if stop is received. Store the location
