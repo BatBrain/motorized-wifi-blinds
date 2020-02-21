@@ -1,4 +1,4 @@
-To Do: HTTPS Support, add support for google home via home-assistant.io compatability, re-factor for accelstepper lib support, multi-motor support
+To Do: HTTPS Support, add support for google home via home-assistant.io compatability, re-factor for accelstepper lib support, multi-motor support, change wifi library to PersWiFiManager (Non-beta and feature complete lib)
 
 # motor-on-roller-blind-ws
 WebSocket based version of [motor-on-roller-blind](https://github.com/nidayand/motor-on-roller-blind). I.e. there is no need of an MQTT server but MQTT is supported as well - you can control it with WebSockets and/or with MQTT messages.
