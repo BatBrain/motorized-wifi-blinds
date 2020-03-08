@@ -1,6 +1,10 @@
 To Do: HTTPS Support, add support for google home via home-assistant.io compatability, re-factor for accelstepper lib support, multi-motor support, change wifi library to PersWiFiManager (Non-beta and feature complete lib)
 
 # motor-on-roller-blind-ws
+
+## NOTICE:
+**This is a work in progress and was cloned from the original project (https://github.com/nidayand/motor-on-roller-blind-ws) which was abandoned in 2017. This readme has not been updated for accuracy.**
+
 WebSocket based version of [motor-on-roller-blind](https://github.com/nidayand/motor-on-roller-blind). I.e. there is no need of an MQTT server but MQTT is supported as well - you can control it with WebSockets and/or with MQTT messages.
 
 3d parts for printing are available on Thingiverse.com: ["motor on a roller blind"](https://www.thingiverse.com/thing:2392856)
